@@ -3,7 +3,8 @@
 API server deployed in heroku - https://friend-management.herokuapp.com/  
 Documentation - https://friend-management.herokuapp.com/swagger-ui.html  
 
-Technologies used: Java, Spring Boot, Hibernate, MySql, Swagger (for documentation)
+Technologies used: Java, Spring Boot, Hibernate, MySql, Swagger (for documentation)  
+Using Spring Boot to create a REST API service is easy because of spring boot initializer. Because of this, creating a rest api can be started in less than 5 minutes with minimal configurations.  
 
 ## API
 ### 1. Create user
