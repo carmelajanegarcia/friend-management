@@ -1,7 +1,7 @@
 # friend-management
 
-API server deployed in heroku - https://friend-management.herokuapp.com/
-Documentation - https://friend-management.herokuapp.com/swagger-ui.html
+API server deployed in heroku - https://friend-management.herokuapp.com/  
+Documentation - https://friend-management.herokuapp.com/swagger-ui.html  
 
 Technologies used: Java, Spring Boot, Hibernate, MySql, Swagger (for documentation)
 
