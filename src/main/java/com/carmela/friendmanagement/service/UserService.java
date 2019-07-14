@@ -18,7 +18,11 @@ public class UserService {
     private UserRepository userRepository;
 
     @Transactional
-    public User createUser(User user) {
+    public User createUser(User user) throws Exception {
+        if (userRepository.existsByEmail(user.getEmail())) {
+            throw new Exception("User already exists");
+        }
+
         return userRepository.save(user);
     }
 

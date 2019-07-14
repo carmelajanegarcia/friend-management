@@ -20,10 +20,20 @@ public class UserController {
 
     @ApiOperation(value = "Add a user", response = User.class)
     @PostMapping
-    public User createUser(
+    public ResponseEntity createUser(
             @ApiParam(value = "User object to store in database table. Example: {email:'carmela@gmail.com'}", required = true)
             @RequestBody User user) {
-        return userService.createUser(user);
+        Map<String, Object> responseData = new HashMap<>();
+
+        try {
+            userService.createUser(user);
+            responseData.put("success", true);
+            return ResponseEntity.ok(responseData);
+        } catch (Exception e) {
+            responseData.put("success", false);
+            responseData.put("message", e.getMessage());
+            return ResponseEntity.badRequest().body(responseData);
+        }
     }
 
     @ApiOperation(value = "Create a connection (friendship) between 2 users", response = ResponseEntity.class)
